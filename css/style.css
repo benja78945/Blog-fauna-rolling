@@ -7,3 +7,17 @@ ol {
 
 /* para darle un alto mínimo al bloque publicitario del sidebar */
 .ratio-16x9 { min-height: 160px; }
+
+.carousel-caption h5 {
+    color: white;
+}
+
+.carousel-caption p {
+    color: white;
+}
+
+/* agregue una sombra leve al texto para que se lea mejor en las imagenes, de todas formas las imagenes son temporales, a modo de ejemplo */
+.carousel-caption h5,
+.carousel-caption p {
+    text-shadow: 6px 6px 12px black;
+}
