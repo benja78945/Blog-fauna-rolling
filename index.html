@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-     <link rel="stylesheet" href="./css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Fauna Argentina</title>
 </head>
 <body>
@@ -13,16 +13,21 @@
             <h1 class="text-center">Blog Fauna Argentina</h1>
         </nav>
     </header>
-    <main>
-        <section>
-            <ol>
-            <li><p>navegacion 1</p></li>
-            <li><p>navegacion 2</p></li>
-            <li><p>navegacion 3</p></li>
-            <li><p>navegacion 4</p></li>
-            </ol>
-        </section>
-        <footer>
+    <main class="container my-4">
+        <div class="row gy-4">
+            <!-- Columna principal -->
+            <section class="col-12 col-md-8" id="entradas">
+                <h2 class="h4">Últimas entradas</h2>
+                <p class="text-muted">Acá irán las 3 entradas del blog y la paginación.</p>
+            </section>
+            <!-- Columna lateral  -->
+            <aside class="col-12 col-md-4" id="lateral">
+                <h2 class="h6">Barra lateral</h2>
+                <p class="text-muted mb-0">Acá irán buscador, categorías y publicidad.</p>
+            </aside>
+        </div>
+        <footer class="border-top mt-5 pt-3 text-center text-muted small">
+            © 2025 Blog Fauna Argentina
         </footer>
     </main>
 </body>

@@ -1,3 +1,9 @@
 ol {
     list-style: none;
 }
+
+/* para que las imágenes del slider y cards no se desacomoden*/
+.object-fit-cover { object-fit: cover; }
+
+/* para darle un alto mínimo al bloque publicitario del sidebar */
+.ratio-16x9 { min-height: 160px; }
