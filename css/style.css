@@ -5,6 +5,19 @@ a {
     text-decoration: none;
     color: rgba(0, 0, 0, 0.712);
 }
+.navbar {
+    background-color: rgb(27, 168, 27) 
+    !important;
+
+}
+button {
+    background-color: rgba(16, 80, 16, 0.26) !important;
+    border-radius: 7px !important;
+}
+button :hover {
+    cursor: pointer;
+    color: rgb(233, 238, 233);
+}
 body {
     padding-top: 80px;
 }
