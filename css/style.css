@@ -21,3 +21,27 @@ ol {
 .carousel-caption p {
     text-shadow: 6px 6px 12px black;
 }
+
+/* Altode  miniaturas de entradas */
+.card-img-top.object-fit-cover { height: 240px; }
+
+/* Fondo de la parte de texto en las entradas */
+.card-body {
+    background-color: grey;
+}
+
+/* Título de la entrada */
+.card-body .card-title {
+    color: white;
+}
+
+/* Texto de la entrada */
+.card-body .card-text {
+    color: white; 
+}
+
+/* bordes de las cards */
+.card {
+    border: 6px solid lightblue;
+    border-radius: 8px;     
+}
