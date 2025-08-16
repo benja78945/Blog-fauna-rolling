@@ -45,3 +45,7 @@ ol {
     border: 6px solid lightblue;
     border-radius: 8px;     
 }
+
+/* Alto mínimo para simular publicidad */
+.ratio-16x9 { min-height: 160px; }
+

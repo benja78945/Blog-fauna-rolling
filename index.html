@@ -110,8 +110,39 @@
             </section>
             <!-- Columna lateral  -->
             <aside class="col-12 col-md-4" id="lateral">
-                <h2 class="h6">Barra lateral</h2>
-                <p class="text-muted mb-0">Acá irán buscador, categorías y publicidad.</p>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="h6 mb-2">Buscar artículos</h2>
+                        <form role="search">
+                            <div class="input-group">
+                                <input type="search" class="form-control" placeholder="Buscar..." aria-label="Buscar">
+                                <button class="btn btn-outline-secondary" type="submit">Ir</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="h6 mb-2">Categorías</h2>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><a class="text-decoration-none" href="#">Aves</a></li>
+                            <li class="list-group-item"><a class="text-decoration-none" href="#">Mamíferos</a></li>
+                            <li class="list-group-item"><a class="text-decoration-none" href="#">Marinos</a></li>
+                            <li class="list-group-item"><a class="text-decoration-none" href="#">Conservación</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card d-none d-md-block">
+                    <img src="./assets/img/publicidad.jpg" 
+                        class="card-img-top" 
+                        alt="Publicidad del blog">
+                    <!-- <div class="card-body">
+                        <span class="badge text-bg-secondary">Publicidad</span>
+                        <p class="small text-muted mb-0">texto publicidad</p>
+                    </div> -->
+                </div>
             </aside>
         </div>
         <footer class="border-top mt-5 pt-3 text-center text-muted small">
