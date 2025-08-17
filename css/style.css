@@ -1,22 +1,25 @@
 ol {
     list-style: none;
 }
-a {
+nav a {
     text-decoration: none;
-    color: rgba(0, 0, 0, 0.712);
+    color: rgb(241, 240, 240);
 }
 .navbar {
-    background-color: rgb(27, 168, 27) 
+    background-color: #4b2e2e 
     !important;
-
+    
+}
+nav li :hover {
+    color: rgb(0, 0, 0) !important;
 }
 button {
-    background-color: rgba(16, 80, 16, 0.26) !important;
+    background-color: rgb(151, 85, 9) !important;
     border-radius: 7px !important;
 }
 button :hover {
     cursor: pointer;
-    color: rgb(233, 238, 233);
+    color: rgb(3, 3, 3);
 }
 body {
     padding-top: 80px;
