@@ -14,13 +14,12 @@ nav li :hover {
     color: rgb(0, 0, 0) !important;
 }
 button {
-    background-color: rgb(151, 85, 9) !important;
+    color: white !important;
     border-radius: 7px !important;
-}
-button :hover {
-    cursor: pointer;
-    color: rgb(3, 3, 3);
 }
 body {
     padding-top: 80px;
+}
+.modal-backdrop {
+    display: none !important;
 }
