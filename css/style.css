@@ -91,3 +91,36 @@ body.error-404 {
     background: url("../assets/img/404.jpg") center/cover no-repeat fixed;
     color: white;                 
 }
+
+/* Animación en las cards */
+.card {
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.card:hover {
+    transform: scale(1.03); 
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.3); 
+}
+
+/* esto cambia el color de las flechas del carrusel a negro */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(200%);
+}
+
+/* y esto les da mas tamaño, para mejor visibilidad */
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 80px;   
+    height: 80px;
+}
+
+/* esto cambia la forma y los colores de los botones de la parte baja del carrousel*/
+.carousel-indicators [data-bs-target] {
+    background-color: black;
+    width: 12px;   /* opcional: más grandes */
+    height: 12px;
+    border-radius: 50%; /* círculo perfecto */
+}
