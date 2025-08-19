@@ -6,16 +6,23 @@ nav a {
     color: rgb(241, 240, 240);
 }
 .navbar {
-    background-color: #4b2e2e 
+    background-color: #735557 
     !important;
     
 }
 nav li :hover {
     color: rgb(0, 0, 0) !important;
 }
-button {
-    color: white !important;
+
+nav button {
     border-radius: 7px !important;
+    background-color: #D29F80 !important;
+}
+button a:hover {
+    color: #97866A !important;
+}
+nav button:hover {
+    color: #97866A !important;
 }
 body {
     padding-top: 80px;
