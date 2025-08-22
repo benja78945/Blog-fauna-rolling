@@ -1,0 +1,25 @@
+a {
+    text-decoration: none;
+    color: black;
+}
+section a:hover {
+    color: #97866A;
+}
+body {
+    background-color: #d2a080ab !important;
+    height: 100vw !important;
+}
+.card {
+    margin: 10px;
+}
+.benja {
+    display: flex;
+    justify-content: center;
+}
+h2 {
+    padding-bottom: 10%;
+}
+div .card {
+    border-radius: 10px !important;
+    border: 3px solid rgb(243, 240, 240);
+}
