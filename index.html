@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+     <!-- Bootstrap Icons (para íconos como Instagram, WhatsApp, etc.) -->
+  <link rel="stylesheet" 
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+         <!-- Tus estilos personalizados -->
      <link rel="stylesheet" href="./css/style.css">
     <title>Fauna Argentina</title>
 </head>
@@ -23,33 +27,73 @@
             </ol>
         </section>
 
-      <footer class="text-white">
-    <div class="container py-4"> <!-- centrado + padding vertical -->
-        <div class="row align-items-center gy-3">
-            
-              <!-- Columna 1: logo del sitio -->
-      <div class="col-12 col-md-4 text-center text-md-start mb-3 mb-md-0">
-        <img src="./img/logo.png" alt="Logo Fauna Argentina" width="60" class="me-4 align-text-bottom">
-        <strong>Fauna Argentina</strong>
+    <footer class="text-white">
+  <div class="container py-4">
+    <div class="row gy-3 align-items-center">
+      
+      <!-- Columna 1: logo + nombre (usa .footer-brand para CSS de alineación) -->
+      <div class="col-12 col-md-4 text-center text-md-start">
+        <div class="footer-brand d-inline-flex align-items-center">
+          <img src="./img/logo.png" alt="Logo Fauna Argentina" width="60" class="me-2 align-text-bottom">
+          <div>
+            <strong>Fauna Argentina</strong>
+            <p class="mb-0">© 2025 Fauna Argentina</p>
+          </div>
+        </div>
       </div>
-      <!-- Columna 2: navegación -->
+
+      <!-- Columna 2: navegación (vertical como Rolling) -->
       <div class="col-12 col-md-4">
         <nav aria-label="Enlaces del sitio">
-                   <ul class="list-unstyled d-flex gap-4 justify-content-center justify-content-md-start mb-0">
-                        <li><a href="#" class="text-white text-decoration-none">Inicio</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Sobre Nosotros</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Contacto</a></li>
-                    </ul>
-                </nav>
-            </div>
-              <!-- Columna 3: copyright -->
-           <div class="col-12 col-md-4 text-md-end mt-3 mt-md-0"> <!-- Con esto, en pantallas chicas se ve 1 columna; en medianas y grandes se ven 3. -->
-                <!-- Comentario: sección con copyright -->
-                <p class="mb-0">&copy; 2025 Fauna Argentina. Todos los derechos reservados.</p>
-            </div>
+          <!-- footer-links activa el hover tipo “chip” definido en tu CSS -->
+          <ul class="list-unstyled d-flex flex-column align-items-center gap-2 my-2 footer-links">
+            <li>
+              <a href="#" class="text-white text-decoration-none">
+                <i class="bi bi-house-door me-2"></i> Inicio
+              </a>
+            </li>
+            <li>
+              <a href="#" class="text-white text-decoration-none">
+                <i class="bi bi-journal-text me-2"></i> Sobre Nosotros
+              </a>
+            </li>
+            <li>
+              <a href="#" class="text-white text-decoration-none">
+                <i class="bi bi-envelope me-2"></i> Contacto
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
 
+      <!-- Columna 3: contacto + redes -->
+      <div class="col-12 col-md-4 text-center text-md-end footer-contact">
+        <!-- Convertimos <p> a <a> para que apliquen los hovers de tu CSS -->
+        <p class="mb-1">
+          <a href="mailto:contacto@fauna-arg.com" class="text-white text-decoration-none">
+            <i class="bi bi-envelope me-2"></i> contacto@fauna-arg.com
+          </a>
+        </p>
+        <p class="mb-1">
+          <a href="https://wa.me/5493813240329" target="_blank" rel="noopener" class="text-white text-decoration-none">
+            <i class="bi bi-whatsapp me-2"></i> +54 9 381 324 0329
+          </a>
+        </p>
+        <p class="mb-2">San Miguel de Tucumán</p>
+
+        <!-- Redes (solo Instagram, con clase .footer-social para hover/scale) -->
+        <div aria-label="Redes sociales" class="footer-social">
+          <a href="https://www.instagram.com/refaunar"
+             class="text-white fs-5 me-3"
+             target="_blank" rel="noopener"
+             aria-label="Instagram Refaunar">
+            <i class="bi bi-instagram"></i>
+          </a>
         </div>
+      </div>
+
     </div>
+  </div>
 </footer>
     </main>
 </body>
