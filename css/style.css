@@ -1,330 +1,167 @@
 /* =========================================================
-   Footer del sitio – Blog Fauna Argentina
-   ---------------------------------------------------------
+   Footer del sitio – Blog Fauna Argentina (versión comentada línea a línea)
    Objetivo:
-   - Respetar la paleta definida por el equipo
-   - Mantener legibilidad y jerarquía
-   - Tener un hover claro en los enlaces (estilo Rolling)
-   - Funcionar bien con el grid de Bootstrap (col-12 / col-md-4)
+   - Usar paleta acordada
+   - Estructura clara y accesible
+   - Hover visible (estilo “Rolling”)
+   - Grid responsive con Bootstrap (col-12 / col-md-4)
    ========================================================= */
 
-/* -----------------------------
-   1) Paleta (documentación)
-   -----------------------------
-   Fondo login/nav/footer:  #735557
-   Botones / acento:        #D29F80
-   Hover de acento:         #97866A
-   Texto base en footer:    #FFFFFF (con opacidad sutil para secundarios)
-*/
-
-/* -----------------------------
-   2) Base del <footer>
-   - Color de fondo según paleta
-   - Tamaño de texto apenas menor para jerarquía
-   ----------------------------- */
+/* ---------- Base del <footer> ---------- */
 footer {
-  background-color: #735557;     /* Fondo oficial del footer (paleta) */
-  color: #FFFFFF;                 /* Texto principal blanco para contraste */
-  font-size: 0.95rem;             /* Leve reducción vs. cuerpo */
+  background-color: #735557;   /* Fondo oficial (coherente con nav/login); mejora identidad visual */
+  color: #FFFFFF;              /* Texto blanco para alto contraste y legibilidad */
+  font-size: 0.95rem;          /* Leve reducción para jerarquía: footer < cuerpo principal */
 }
 
-/* En algunos textos secundarios (si los hubiera) podemos bajar opacidad.
-   No es obligatorio; queda como utilidad. */
-footer .text-muted,
-footer .muted {
-  color: rgba(255, 255, 255, 0.75);  /* Secundario más suave */
+/* ---------- Texto secundario dentro del footer ---------- */
+footer .text-muted,           /* Utilidad de Bootstrap para textos “suaves” */
+footer .muted {               /* Clase propia por si se usa fuera de .text-muted */
+  color: rgba(255, 255, 255, 0.75); /* Blanco con opacidad: baja “peso visual” sin cambiar paleta */
 }
 
-/* -----------------------------
-   3) Enlaces dentro del footer
-   - Color de acento (paleta)
-   - Sin subrayado por diseño
-   - Transición suave para el hover
-   ----------------------------- */
+/* ---------- Enlaces del footer (estado base + transición) ---------- */
 footer a {
-  color: #D29F80;               /* Acento definido por el equipo */
-  text-decoration: none;        /* Sin subrayado */
-  transition: color 0.25s ease; /* Animación de cambio de color */
+  color: #D29F80;                   /* Color de acento definido por el equipo: coherencia con botones */
+  text-decoration: none;            /* Quitamos subrayado para un look más limpio */
+  transition:                        /* Transiciones suaves para feedback visual al usuario */
+    color 0.25s ease,               /* Cambio de color gradual */
+    background-color 0.2s ease,     /* Para efectos tipo “chip” */
+    transform 0.2s ease;            /* Para micro-animaciones (zoom/traslación) */
 }
 
-/* Hover: resaltamos el enlace.
-   Opciones:
-   - #FFFFFF (más “luminoso”)
-   - #97866A (hover de paleta)
-   Elegimos blanco para máxima legibilidad, como el ejemplo de Rolling. */
+/* ---------- Enlaces en hover: alto contraste ---------- */
 footer a:hover {
-  color: #FFFFFF;
+  color: #FFFFFF;                   /* En hover usamos blanco: máxima legibilidad en fondo oscuro */
 }
 
-/* -----------------------------
-   4) Columna de navegación (centro)
-   - Mostramos los links uno debajo del otro
-   - Separación vertical entre ítems
-   - Este selector funciona con tu <nav><ul><li><a>…</a></li></ul></nav>
-   ----------------------------- */
+/* ---------- Lista de navegación del centro ---------- */
 footer nav ul {
-  list-style: none;   /* Sin viñetas */
-  padding-left: 0;    /* Quitamos indentación del <ul> */
-  margin: 0;          /* Reseteo de márgenes */
+  list-style: none;                 /* Quita viñetas para menú de links */
+  padding-left: 0;                  /* Remueve indentación por defecto del <ul> */
+  margin: 0;                        /* Resetea márgenes para controlar espaciados con utilidades */
 }
 
-/* Cada ítem deja un pequeño espacio con el siguiente */
+/* ---------- Separación entre ítems del menú ---------- */
 footer nav li + li {
-  margin-top: 0.4rem;
+  margin-top: 0.4rem;               /* Espacio vertical entre enlaces: mejora escaneabilidad */
 }
 
-/* “Toque fino” para los links del centro (opcional) */
-.footer-links a { 
-  line-height: 1.4;             /* Altura de línea cómoda */
+/* ---------- Ajustes finos para links del centro ---------- */
+.footer-links a {
+  line-height: 1.4;                 /* Altura de línea cómoda (mejora clic y lectura) */
 }
-.footer-links i { 
-  font-size: 1rem;              /* Tamaño de icono si usás <i> */
-  vertical-align: -2px;         /* Alineación del icono con el texto */
+.footer-links i {
+  font-size: 1rem;                  /* Tamaño de icono alineado con texto */
+  vertical-align: -2px;             /* Corrige baseline para que icono y texto queden alineados */
 }
 
-/* -----------------------------
-   5) Columna de logo (izquierda)
-   - Alineación del logo con el texto
-   - Tamaño sugerido del logo dentro del footer
-   - Si en HTML ya usás Bootstrap (me-2, align-text-bottom), esto suma estabilidad
-   ----------------------------- */
+/* ---------- Columna de brand (logo + nombre) ---------- */
 footer .footer-brand img {
-  /* Si necesitás limitar altura del logo, descomentá: */
-  /* max-height: 48px; */
-  height: auto;
-  width: auto;
+  /* max-height: 48px; */           /* (Opcional) Limita la altura si el logo se ve muy grande */
+  height: auto;                     /* Mantiene proporción vertical del logo */
+  width: auto;                      /* Mantiene proporción horizontal del logo */
 }
-
-/* =========================================================
-   Footer del sitio – Blog Fauna Argentina
-   ---------------------------------------------------------
-   Objetivo:
-   - Respetar la paleta definida por el equipo
-   - Mantener legibilidad y jerarquía
-   - Tener un hover claro en los enlaces (estilo Rolling)
-   - Funcionar bien con el grid de Bootstrap (col-12 / col-md-4)
-   ========================================================= */
-
-
-/* -----------------------------
-   1) Paleta (documentación)
-   -----------------------------
-   Fondo login/nav/footer:  #735557
-   Botones / acento:        #D29F80
-   Hover de acento:         #97866A
-   Texto base en footer:    #FFFFFF (con opacidad sutil para secundarios)
-*/
-
-
-/* -----------------------------
-   2) Base del <footer>
-   - Color de fondo según paleta
-   - Tamaño de texto apenas menor para jerarquía
-   ----------------------------- */
-footer {
-  background-color: #735557;     /* Fondo oficial del footer (paleta) */
-  color: #FFFFFF;                 /* Texto principal blanco para contraste */
-  font-size: 0.95rem;             /* Leve reducción vs. cuerpo */
-}
-
-/* Textos secundarios (si los hubiera) con menor “peso visual” */
-footer .text-muted,
-footer .muted {
-  color: rgba(255, 255, 255, 0.75);  /* Blanco con opacidad */
-}
-
-
-/* -----------------------------
-   3) Enlaces dentro del footer
-   - Color de acento (paleta)
-   - Sin subrayado por diseño
-   - Transición suave para hover
-   ----------------------------- */
-footer a {
-  color: #D29F80;               /* Acento definido por el equipo */
-  text-decoration: none;        /* Sin subrayado */
-  transition: color 0.25s ease; /* Animación de cambio de color */
-}
-
-/* Hover general de enlaces:
-   - Blanco para máxima legibilidad (estilo Rolling) */
-footer a:hover {
-  color: #FFFFFF;
-}
-
-
-/* -----------------------------
-   4) Columna de navegación (centro)
-   - Links uno debajo del otro
-   - Separación vertical entre ítems
-   - Aplica a tu <nav><ul><li><a>…</a></li></ul>
-   ----------------------------- */
-footer nav ul {
-  list-style: none;  /* Sin viñetas */
-  padding-left: 0;   /* Quitamos indentación del <ul> */
-  margin: 0;         /* Reseteo de márgenes */
-}
-
-/* Separación vertical entre cada item */
-footer nav li + li {
-  margin-top: 0.4rem;            /* Espacio entre enlaces */
-}
-
-/* Toque fino para los links del centro (opcional) */
-.footer-links a { 
-  line-height: 1.4;              /* Altura de línea cómoda */
-}
-.footer-links i { 
-  font-size: 1rem;               /* Tamaño de ícono si usás <i> */
-  vertical-align: -2px;          /* Alineación del ícono con el texto */
-}
-
-
-/* -----------------------------
-   5) Columna de logo (izquierda)
-   - Estabilidad del logo
-   - Texto de marca con leve énfasis
-   ----------------------------- */
-footer .footer-brand img {
-  /* Si necesitás limitar altura del logo, descomentá la línea de abajo */
-  /* max-height: 48px; */
-  height: auto;                  /* Mantener proporción vertical */
-  width: auto;                   /* Mantener proporción horizontal */
-}
-
 footer .footer-brand strong {
-  font-weight: 600;              /* Marca con un poco más de peso */
+  font-weight: 600;                 /* Leve énfasis en el nombre de marca (no exagera) */
 }
 
-
-/* -----------------------------
-   6) Columna de contacto / redes (derecha)
-   - Alineación de íconos con texto
-   - Separación entre líneas
-   ----------------------------- */
-footer .footer-contact .bi {     /* .bi = Bootstrap Icons */
-  vertical-align: -2px;          /* Alinea ícono con la línea de texto */
-  margin-right: 6px;             /* Pequeño espacio antes del texto */
+/* ---------- Columna de contacto (íconos alineados) ---------- */
+footer .footer-contact .bi {        /* .bi = clase de Bootstrap Icons */
+  vertical-align: -2px;             /* Alinea icono con la línea de texto (mejor estética) */
+  margin-right: 6px;                /* Separación entre icono y texto para legibilidad */
 }
 
-/* Bloque de redes: tamaño de íconos y separación horizontal */
+/* ---------- Redes sociales: tamaño/margen base ---------- */
 footer .footer-social a {
-  font-size: 1.25rem;            /* Íconos un poco más grandes */
-  margin-right: 0.6rem;          /* Espacio entre íconos */
+  font-size: 1.25rem;               /* Iconos un poco más grandes para facilitar clic y reconocimiento */
+  margin-right: 0.6rem;             /* Separación horizontal entre iconos */
 }
-
-/* El último ícono sin margen extra */
 footer .footer-social a:last-child {
-  margin-right: 0;
+  margin-right: 0;                  /* Evita margen extra en el último icono */
 }
 
-
-/* -----------------------------
-   6 bis) Color base + herencia en derecha
-   - Evita conflictos con .text-white de Bootstrap (!important)
-   - Los enlaces heredan el color desde el contenedor
-   ----------------------------- */
-footer .footer-contact,
-footer .footer-social {
-  color: #FFFFFF;                 /* Texto/íconos por defecto en blanco */
+/* ---------- Herencia de color en contacto/redes ---------- */
+footer .footer-contact,             /* Contenedor de contacto: texto blanco por defecto */
+footer .footer-social {             /* Contenedor de redes: texto/iconos blancos por defecto */
+  color: #FFFFFF;                   /* Garantiza legibilidad aunque el enlace herede el color */
 }
-
 footer .footer-contact a,
 footer .footer-social a {
-  color: inherit;                 /* Los <a> heredan el color del contenedor */
-  text-decoration: none;          /* Sin subrayado por consistencia */
+  color: inherit;                   /* Los enlaces heredan el color del contenedor (blanco) */
+  text-decoration: none;            /* Mantiene coherencia visual (sin subrayado) */
 }
 
-
-/* -----------------------------
-   7) Espaciado vertical entre columnas (móvil)
-   - En col-12 queremos aire entre bloques
-   - En md+ se quita porque van en fila
-   ----------------------------- */
+/* ---------- Espaciado vertical entre columnas en móvil ---------- */
 footer .col-12 {
-  margin-bottom: 1rem;           /* “Respiración” entre columnas en stacking */
+  margin-bottom: 1rem;              /* Cuando están apiladas (col-12), dejamos “aire” entre bloques */
 }
-
-@media (min-width: 768px) {      /* md de Bootstrap */
+@media (min-width: 768px) {         /* md: breakpoint Bootstrap (tablets en adelante) */
   footer .col-12 {
-    margin-bottom: 0;            /* En fila: sin margen extra */
+    margin-bottom: 0;               /* En fila (md+), ya no necesitamos margen inferior extra */
   }
 }
 
-
-/* -----------------------------
-   8) Accesibilidad: foco visible
-   - Para navegación por teclado
-   ----------------------------- */
-footer a:focus-visible {
-  outline: 2px dashed rgba(255,255,255,0.8); /* Anillo de foco visible */
-  outline-offset: 2px;                       /* Separación del borde */
+/* ---------- Accesibilidad: foco visible para teclado ---------- */
+footer a:focus-visible {            /* Solo cuando el foco viene de teclado (no de mouse) */
+  outline: 2px dashed rgba(255,255,255,0.8); /* Anillo notorio pero sutil */
+  outline-offset: 2px;              /* Separa el anillo del borde para que no “pegue” con el texto */
 }
 
-
-/* -----------------------------
-   9) (Opcional) Línea separadora previa a redes
-   - Usar clase: .footer-social--with-sep
-   ----------------------------- */
+/* ---------- (Opcional) Línea separadora sobre redes ---------- */
 .footer-social--with-sep {
-  padding-top: 0.75rem;                          /* Espacio antes de la línea */
-  border-top: 2px solid rgba(255, 255, 255, 0.2);/* Separador sutil */
+  padding-top: 0.75rem;             /* Espacio antes del borde para que no quede “apretado” */
+  border-top: 2px solid rgba(255,255,255,0.2); /* Separador sutil que no rompe la paleta */
 }
-
 
 /* =========================================================
-   10) Hover “sombreado” (estilo Rolling)
-   - Centro: píldora suave con fondo translúcido
-   - Derecha (contacto/redes): mismas sensaciones visuales
+   Hovers “estilo Rolling”
+   – Centro: efecto “chip” (fondo translúcido)
+   – Derecha: chip + color de acento en hover
+   – Redes: botón circular con zoom suave
    ========================================================= */
 
-/* Centro: hacer el <a> un “chip” con fondo en hover */
+/* ---------- Centro: convertir links en “chips” ---------- */
 .footer-links a {
-  display: inline-block;                /* Respeta padding y border-radius */
-  padding: 4px 10px;                    /* Área clickeable más cómoda */
-  border-radius: 6px;                   /* Bordes suaves tipo píldora */
-  transition: background-color .2s, color .2s; /* Animación suave */
+  display: inline-block;            /* Necesario para respetar padding/border-radius en el <a> */
+  padding: 4px 10px;                /* Área clickeable más cómoda */
+  border-radius: 6px;               /* Bordes suaves tipo “píldora” */
+  transition: background-color .2s, color .2s; /* Suavidad al pasar el mouse */
 }
-
-/* Fondo sutil cuando se pasa el mouse */
 .footer-links a:hover {
-  background-color: rgba(255, 255, 255, 0.12); /* Veladura clara */
-  color: #FFFFFF;                              /* Texto blanco en hover */
+  background-color: rgba(255,255,255,0.12); /* “Veladura” clara que se ve sobre #735557 */
+  color: #FFFFFF;                            /* Asegura legibilidad alta en hover */
 }
-
-/* Asegurar que el ícono “blanquee” también */
 .footer-links a:hover i {
-  color: #FFFFFF;
+  color: #FFFFFF;                            /* El icono acompaña el cambio de color del texto */
 }
 
-/* Derecha: enlaces de contacto con “chip” y acento en hover */
+/* ---------- Derecha (contacto): chip + acento y micro-movimiento ---------- */
 footer .footer-contact a {
-  display: inline-block;                 /* Área clickeable tipo chip */
-  padding: 4px 8px;                      /* Espacio alrededor del texto */
-  border-radius: 6px;                    /* Bordes suaves */
-  transition: background-color .2s, color .2s, transform .2s;
+  display: inline-block;            /* Misma lógica de “chip” que en el centro */
+  padding: 4px 8px;                 /* Un poco menos de padding que la nav: equilibrio visual */
+  border-radius: 6px;               /* Bordes suaves coherentes con el resto */
+  transition: background-color .2s, color .2s, transform .2s; /* Incluye leve movimiento */
 }
-
 footer .footer-contact a:hover {
-  background-color: rgba(255, 255, 255, 0.12);  /* Sombreado sutil */
-  color: #D29F80 !important;                    /* Acento en hover (vence .text-white) */
-  transform: translateY(-1px);                  /* Micro elevación */
+  background-color: rgba(255,255,255,0.12);  /* Sombreado sutil para feedback */
+  color: #D29F80 !important;                 /* Enfatizamos con el color de acento del equipo */
+  transform: translateY(-1px);               /* Micro “elevación” que sugiere clickeabilidad */
 }
 
-/* Redes: botón redondo con área cómoda y zoom en hover */
+/* ---------- Redes: botón circular con zoom en hover ---------- */
 footer .footer-social a {
-  display: inline-flex;                          /* Caja flex centrada */
-  align-items: center;
-  justify-content: center;
-  width: 40px;                                   /* Área fácil de clickear */
-  height: 40px;
-  border-radius: 50%;                            /* Botón circular */
-  color: inherit;                                /* Hereda blanco base */
-  transition: background-color .2s, color .2s, transform .2s;
+  display: inline-flex;             /* Centra icono sin depender de line-height */
+  align-items: center;              /* Alineación vertical del icono */
+  justify-content: center;          /* Alineación horizontal */
+  width: 40px;                      /* Área diana de tamaño suficiente para accesibilidad */
+  height: 40px;                     /* Alto igual a ancho → círculo perfecto */
+  border-radius: 50%;               /* Forma circular */
+  color: inherit;                   /* Blanco (heredado) por coherencia con el contenedor */
+  transition: background-color .2s, color .2s, transform .2s; /* Feedback visual */
 }
-
 footer .footer-social a:hover {
-  background-color: rgba(255, 255, 255, 0.12);   /* Sombreado */
-  color: #D29F80 !important;                     /* Acento en hover */
-  transform: scale(1.15);                        /* Zoom suave */
+  background-color: rgba(255,255,255,0.12);  /* Sombreado de fondo para “botón” */
+  color: #D29F80 !important;                 /* Acento en el icono al pasar el mouse */
+  transform: scale(1.15);                    /* Zoom suave: comunica interactividad */
 }
