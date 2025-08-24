@@ -121,3 +121,28 @@ button:hover{
     background-color: white;
     color: black;
 }
+
+@media (max-width:768px){
+    .conteiner{
+    grid-column: 2/16 ;
+    grid-row: 2/9;
+    border-radius: 0%;
+    }
+    iframe{
+        display: none;
+    }
+    .mapa{
+        display: none;
+    }
+    button:hover{
+    
+    background-color: initial;
+    color: inherit;
+    cursor: default;
+    color: white;
+}
+}
+    
+
+
+
