@@ -8,7 +8,7 @@ nav a {
 .navbar {
     background-color: #735557 
     !important;
-    
+    padding-bottom: 1.1rem !important; /* hola, soy gonzalo, agregue esto para que el navbar no deje una linea debajo entre el mismo y la imagenes del carrousel, basicamente aumenta el espacio inferior. */
 }
 nav li :hover {
     color: rgb(0, 0, 0) !important;
@@ -30,3 +30,4 @@ body {
 .modal-backdrop {
     display: none !important;
 }
+
