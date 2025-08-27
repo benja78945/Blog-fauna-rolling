@@ -1,0 +1,167 @@
+/* =========================================================
+   Footer del sitio – Blog Fauna Argentina (versión comentada línea a línea)
+   Objetivo:
+   - Usar paleta acordada
+   - Estructura clara y accesible
+   - Hover visible (estilo “Rolling”)
+   - Grid responsive con Bootstrap (col-12 / col-md-4)
+   ========================================================= */
+
+/* ---------- Base del <footer> ---------- */
+footer {
+  background-color: #735557;   /* Fondo oficial (coherente con nav/login); mejora identidad visual */
+  color: #FFFFFF;              /* Texto blanco para alto contraste y legibilidad */
+  font-size: 0.95rem;          /* Leve reducción para jerarquía: footer < cuerpo principal */
+}
+
+/* ---------- Texto secundario dentro del footer ---------- */
+footer .text-muted,           /* Utilidad de Bootstrap para textos “suaves” */
+footer .muted {               /* Clase propia por si se usa fuera de .text-muted */
+  color: rgba(255, 255, 255, 0.75); /* Blanco con opacidad: baja “peso visual” sin cambiar paleta */
+}
+
+/* ---------- Enlaces del footer (estado base + transición) ---------- */
+footer a {
+  color: #D29F80;                   /* Color de acento definido por el equipo: coherencia con botones */
+  text-decoration: none;            /* Quitamos subrayado para un look más limpio */
+  transition:                        /* Transiciones suaves para feedback visual al usuario */
+    color 0.25s ease,               /* Cambio de color gradual */
+    background-color 0.2s ease,     /* Para efectos tipo “chip” */
+    transform 0.2s ease;            /* Para micro-animaciones (zoom/traslación) */
+}
+
+/* ---------- Enlaces en hover: alto contraste ---------- */
+footer a:hover {
+  color: #FFFFFF;                   /* En hover usamos blanco: máxima legibilidad en fondo oscuro */
+}
+
+/* ---------- Lista de navegación del centro ---------- */
+footer nav ul {
+  list-style: none;                 /* Quita viñetas para menú de links */
+  padding-left: 0;                  /* Remueve indentación por defecto del <ul> */
+  margin: 0;                        /* Resetea márgenes para controlar espaciados con utilidades */
+}
+
+/* ---------- Separación entre ítems del menú ---------- */
+footer nav li + li {
+  margin-top: 0.4rem;               /* Espacio vertical entre enlaces: mejora escaneabilidad */
+}
+
+/* ---------- Ajustes finos para links del centro ---------- */
+.footer-links a {
+  line-height: 1.4;                 /* Altura de línea cómoda (mejora clic y lectura) */
+}
+.footer-links i {
+  font-size: 1rem;                  /* Tamaño de icono alineado con texto */
+  vertical-align: -2px;             /* Corrige baseline para que icono y texto queden alineados */
+}
+
+/* ---------- Columna de brand (logo + nombre) ---------- */
+footer .footer-brand img {
+  /* max-height: 48px; */           /* (Opcional) Limita la altura si el logo se ve muy grande */
+  height: auto;                     /* Mantiene proporción vertical del logo */
+  width: auto;                      /* Mantiene proporción horizontal del logo */
+}
+footer .footer-brand strong {
+  font-weight: 600;                 /* Leve énfasis en el nombre de marca (no exagera) */
+}
+
+/* ---------- Columna de contacto (íconos alineados) ---------- */
+footer .footer-contact .bi {        /* .bi = clase de Bootstrap Icons */
+  vertical-align: -2px;             /* Alinea icono con la línea de texto (mejor estética) */
+  margin-right: 6px;                /* Separación entre icono y texto para legibilidad */
+}
+
+/* ---------- Redes sociales: tamaño/margen base ---------- */
+footer .footer-social a {
+  font-size: 1.25rem;               /* Iconos un poco más grandes para facilitar clic y reconocimiento */
+  margin-right: 0.6rem;             /* Separación horizontal entre iconos */
+}
+footer .footer-social a:last-child {
+  margin-right: 0;                  /* Evita margen extra en el último icono */
+}
+
+/* ---------- Herencia de color en contacto/redes ---------- */
+footer .footer-contact,             /* Contenedor de contacto: texto blanco por defecto */
+footer .footer-social {             /* Contenedor de redes: texto/iconos blancos por defecto */
+  color: #FFFFFF;                   /* Garantiza legibilidad aunque el enlace herede el color */
+}
+footer .footer-contact a,
+footer .footer-social a {
+  color: inherit;                   /* Los enlaces heredan el color del contenedor (blanco) */
+  text-decoration: none;            /* Mantiene coherencia visual (sin subrayado) */
+}
+
+/* ---------- Espaciado vertical entre columnas en móvil ---------- */
+footer .col-12 {
+  margin-bottom: 1rem;              /* Cuando están apiladas (col-12), dejamos “aire” entre bloques */
+}
+@media (min-width: 768px) {         /* md: breakpoint Bootstrap (tablets en adelante) */
+  footer .col-12 {
+    margin-bottom: 0;               /* En fila (md+), ya no necesitamos margen inferior extra */
+  }
+}
+
+/* ---------- Accesibilidad: foco visible para teclado ---------- */
+footer a:focus-visible {            /* Solo cuando el foco viene de teclado (no de mouse) */
+  outline: 2px dashed rgba(255,255,255,0.8); /* Anillo notorio pero sutil */
+  outline-offset: 2px;              /* Separa el anillo del borde para que no “pegue” con el texto */
+}
+
+/* ---------- (Opcional) Línea separadora sobre redes ---------- */
+.footer-social--with-sep {
+  padding-top: 0.75rem;             /* Espacio antes del borde para que no quede “apretado” */
+  border-top: 2px solid rgba(255,255,255,0.2); /* Separador sutil que no rompe la paleta */
+}
+
+/* =========================================================
+   Hovers “estilo Rolling”
+   – Centro: efecto “chip” (fondo translúcido)
+   – Derecha: chip + color de acento en hover
+   – Redes: botón circular con zoom suave
+   ========================================================= */
+
+/* ---------- Centro: convertir links en “chips” ---------- */
+.footer-links a {
+  display: inline-block;            /* Necesario para respetar padding/border-radius en el <a> */
+  padding: 4px 10px;                /* Área clickeable más cómoda */
+  border-radius: 6px;               /* Bordes suaves tipo “píldora” */
+  transition: background-color .2s, color .2s; /* Suavidad al pasar el mouse */
+}
+.footer-links a:hover {
+  background-color: rgba(255,255,255,0.12); /* “Veladura” clara que se ve sobre #735557 */
+  color: #FFFFFF;                            /* Asegura legibilidad alta en hover */
+}
+.footer-links a:hover i {
+  color: #FFFFFF;                            /* El icono acompaña el cambio de color del texto */
+}
+
+/* ---------- Derecha (contacto): chip + acento y micro-movimiento ---------- */
+footer .footer-contact a {
+  display: inline-block;            /* Misma lógica de “chip” que en el centro */
+  padding: 4px 8px;                 /* Un poco menos de padding que la nav: equilibrio visual */
+  border-radius: 6px;               /* Bordes suaves coherentes con el resto */
+  transition: background-color .2s, color .2s, transform .2s; /* Incluye leve movimiento */
+}
+footer .footer-contact a:hover {
+  background-color: rgba(255,255,255,0.12);  /* Sombreado sutil para feedback */
+  color: #D29F80 !important;                 /* Enfatizamos con el color de acento del equipo */
+  transform: translateY(-1px);               /* Micro “elevación” que sugiere clickeabilidad */
+}
+
+/* ---------- Redes: botón circular con zoom en hover ---------- */
+footer .footer-social a {
+  display: inline-flex;             /* Centra icono sin depender de line-height */
+  align-items: center;              /* Alineación vertical del icono */
+  justify-content: center;          /* Alineación horizontal */
+  width: 40px;                      /* Área diana de tamaño suficiente para accesibilidad */
+  height: 40px;                     /* Alto igual a ancho → círculo perfecto */
+  border-radius: 50%;               /* Forma circular */
+  color: inherit;                   /* Blanco (heredado) por coherencia con el contenedor */
+  transition: background-color .2s, color .2s, transform .2s; /* Feedback visual */
+}
+footer .footer-social a:hover {
+  background-color: rgba(255,255,255,0.12);  /* Sombreado de fondo para “botón” */
+  color: #D29F80 !important;                 /* Acento en el icono al pasar el mouse */
+  transform: scale(1.15);                    /* Zoom suave: comunica interactividad */
+}
