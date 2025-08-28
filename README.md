@@ -3,7 +3,6 @@
 Blog de la Fauna Argentina, informacion e imagenes
 
 ## 🚀 Características
-- Crear, editar y eliminar tareas.
 - Interfaz simple y responsiva.
 - Almacenamiento local de datos.
 
