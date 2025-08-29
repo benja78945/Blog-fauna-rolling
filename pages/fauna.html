@@ -6,9 +6,89 @@
     <title>Fauna Argentina</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="CSS/galeria.css">
+    <link rel="stylesheet" href="../css/galeria.css">
+    <link rel="stylesheet" href="../css/nav.css">
 </head>
 <body>
+    <header>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top fs-5">
+            <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center ms-2" href="#">
+                <img src="../assets/img/logo.png" alt="logo" title="logo" width="45px">
+                Fauna Argentina
+        </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+
+            </li>
+            <li class="nav-item">
+        <a class="nav-link ms-1" href="../pages/nosotros.html">Sobre Nosotros</a>
+            </li>
+            <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Contactos
+        </a>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="https://wa.me/3813240329" target="_blank">Whatsapp</a></li>
+            <li><a class="dropdown-item" href="https://www.instagram.com/refaunar" target="_blank">Instagram</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="../pages/contacto.html" target="_blank">Contacto</a></li>
+        </ul>
+        </li>
+    </ul>
+    <form class="d-flex" role="button">
+        <button class="btn fs-5" type="submit"><a class="text-black" href="./pages/login.html" target="_blank">Login</a></button>
+
+            <button type="button" class="btn fs-5 ms-3 text-black" data-bs-toggle="modal" data-bs-target="#suscripcionModal">
+                Suscribirse
+            </button>
+
+        <div class="modal" id="suscripcionModal" tabindex="-1" aria-labelledby="suscripcionLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+    
+        <div class="modal-header">
+        <h5 class="modal-title" id="suscripcionLabel">Formulario de Suscripción</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+
+        <div class="modal-body">
+        <form>
+            <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre completo</label>
+            <input type="text" class="form-control" id="nombre" placeholder="Tu nombre">
+            </div>
+            <div class="mb-3">
+            <label for="email" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" id="email" placeholder="tucorreo@ejemplo.com">
+            </div>
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="notificaciones">
+            <label class="form-check-label" for="notificaciones">
+            Quiero recibir notificaciones
+            </label>
+            </div>
+        </form>
+        </div>
+
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-secondary"> <a class="text-white" href="../html/404.html">Enviar</a></button>
+    </div>
+
+        </div>
+    </div>
+</div>
+    </form>
+    </div>
+    </div>
+    </nav>
+    </header>
     <div class="container">
         <h1 class="text-center gallery-title">Fauna Silvestre de Argentina</h1>
         <p class="gallery-description">Argentina alberga una increíble diversidad de especies animales en sus diferentes ecosistemas, desde los Andes hasta la Patagonia. Explora nuestra galería para descubrir esta riqueza natural.</p>
@@ -17,15 +97,15 @@
             <!-- Cóndor Andino -->
             <div class="col-12 col-md-4 col-lg-3">
                 <div class="fauna-card">
-                    <div class="fauna-img-container">
-                        <img src="Assets/condorandino.jpg" alt="Cóndor andino volando sobre montañas rocosas al atardecer en los Andes argentinos, con su envergadura de alas negras y blancas visible"/> 
+                    <div class="fauna-img-container ">
+                        <img src="../assets/condorandino.jpg" alt="Cóndor andino volando sobre montañas rocosas al atardecer en los Andes argentinos, con su envergadura de alas negras y blancas visible"/> 
                         
                     </div>
                     <div class="fauna-info">
                         <div class="fauna-name">Cóndor Andino</div>
                         <div class="fauna-description">Ave voladora más grande del mundo, símbolo de los Andes.</div>
                     </div>
-                <a href="condor.html" class="card-link" target="_blank">Ver más</a>
+                <a href="../pages/condor.html" class="card-link text-decoration-none" target="_blank">Ver más</a>
                 </div>
             </div>
             
@@ -33,13 +113,13 @@
             <div class="col-12 col-md-4 col-lg-3">
                 <div class="fauna-card">
                     <div class="fauna-img-container">
-                        <img src="Assets/pumas.jpg" alt="Puma o león de montaña en posición de acecho entre la vegetación de la Patagonia argentina, mostrando su pelaje dorado" />
+                        <img src="../assets/puma-chubut.jpg" alt="Puma o león de montaña en posición de acecho entre la vegetación de la Patagonia argentina, mostrando su pelaje dorado" />
                     </div>
                     <div class="fauna-info">
                         <div class="fauna-name">Puma</div>
                         <div class="fauna-description">Felino de gran tamaño, habita en diferentes regiones del país.</div>
                     </div>
-                <a href="puma.html" class="card-link" target="_blank">Ver más</a>
+                <a href="puma.html" class="card-link text-decoration-none" target="_blank">Ver más</a>
                 </div>
             </div>
             
@@ -47,13 +127,13 @@
             <div class="col-12 col-md-4 col-lg-3">
                 <div class="fauna-card">
                     <div class="fauna-img-container">
-                        <img src="Assets/elyaguarete.jpg" alt="Yaguareté o tigre criollo caminando por la selva de Misiones con su pelaje manchado distintivo" />
+                        <img src="../assets/elyaguarete.jpg" alt="Yaguareté o tigre criollo caminando por la selva de Misiones con su pelaje manchado distintivo" />
                     </div>
                     <div class="fauna-info">
                         <div class="fauna-name">Yaguareté</div>
                         <div class="fauna-description">El felino más grande de América, en peligro de extinción.</div>
                     </div>
-                <a href="yaguarete.html" class="card-link" target="_blank">Ver más</a>
+                <a href="./yaguarete.html" class="card-link text-decoration-none" target="_blank">Ver más</a>
                 </div>
             </div>
             
@@ -61,13 +141,13 @@
             <div class="col-12 col-md-4 col-lg-3">
                 <div class="fauna-card">
                     <div class="fauna-img-container">
-                        <img src="Assets/carpinchos.jpg" alt="Grupo de carpinchos tomando sol en las orillas de los Esteros del Iberá, con su pelaje marrón y aspecto robusto" />
+                        <img src="../assets/carpinchos.jpg" alt="Grupo de carpinchos tomando sol en las orillas de los Esteros del Iberá, con su pelaje marrón y aspecto robusto" />
                     </div>
                     <div class="fauna-info">
                         <div class="fauna-name">Carpincho</div>
                         <div class="fauna-description">Roedor más grande del mundo, habita en zonas húmedas y ríos.</div>
                     </div>
-                <a href="https://www.google.com/?hl=es" class="card-link">Ver más</a>
+                <a href="https://es.wikipedia.org/wiki/Hydrochoerus_hydrochaeris" class="card-link text-decoration-none">Ver más</a>
                 </div>
             </div>
             
@@ -75,13 +155,13 @@
             <div class="col-12 col-md-4 col-lg-3">
                 <div class="fauna-card">
                     <div class="fauna-img-container">
-                        <img src="Assets/Guanaco_Patagonico.jpg" alt="Manada de guanacos corriendo por la estepa patagónica con sus largos cuellos y pelaje marrón claro" />
+                        <img src="../assets/Guanaco_Patagonico.jpg" alt="Manada de guanacos corriendo por la estepa patagónica con sus largos cuellos y pelaje marrón claro" />
                     </div>
                     <div class="fauna-info">
                         <div class="fauna-name">Guanaco</div>
                         <div class="fauna-description">Camelido silvestre típico de la Patagonia, antepasado de la llama.</div>
                     </div>
-                <a href="https://www.google.com/?hl=es" class="card-link">Ver más</a>
+                <a href="https://es.wikipedia.org/wiki/Lama_guanicoe" class="card-link text-decoration-none">Ver más</a>
                 </div>
             </div>
             
@@ -89,13 +169,13 @@
             <div class="col-12 col-md-4 col-lg-3">
                 <div class="fauna-card">
                     <div class="fauna-img-container">
-                        <img src="Assets/horneros.jpg" alt="Hornero en su nido de barro característico sobre un poste en la llanura pampeana, mostrando su plumaje marrón rojizo" />
+                        <img src="../assets/horneros.jpg" alt="Hornero en su nido de barro característico sobre un poste en la llanura pampeana, mostrando su plumaje marrón rojizo" />
                     </div>
                     <div class="fauna-info">
                         <div class="fauna-name">Hornero</div>
                         <div class="fauna-description">Ave nacional de Argentina, conocida por sus nidos de barro.</div>
                     </div>
-                <a href="https://www.google.com/?hl=es" class="card-link">Ver más</a>
+                <a href="https://es.wikipedia.org/wiki/Furnarius" class="card-link text-decoration-none">Ver más</a>
                 </div>
             </div>
             
@@ -103,13 +183,13 @@
             <div class="col-12 col-md-4 col-lg-3">
                 <div class="fauna-card">
                     <div class="fauna-img-container">
-                        <img src="Assets/ñandus.jpg" alt="Ñandú corriendo por la pampa con sus largas patas y plumaje grisáceo característico" />
+                        <img src="../assets/ñandus.jpg" alt="Ñandú corriendo por la pampa con sus largas patas y plumaje grisáceo característico" />
                     </div>
                     <div class="fauna-info">
                         <div class="fauna-name">Ñandú</div>
                         <div class="fauna-description">Ave corredora sudamericana similar al avestruz pero más pequeña.</div>
                     </div>
-                <a href="https://www.google.com/?hl=es" class="card-link">Ver más</a>
+                <a href="https://es.wikipedia.org/wiki/Rhea" class="card-link text-decoration-none">Ver más</a>
                 </div>
             </div>
             
@@ -117,25 +197,25 @@
             <div class="col-12 col-md-4 col-lg-3">
                 <div class="fauna-card">
                     <div class="fauna-img-container">
-                        <img src="Assets/tapires.jpg" alt="Tapir amazónico en un río del Parque Nacional Iguazú, con su característica trompa corta y pelaje oscuro" />
+                        <img src="../assets/tapires.jpg" alt="Tapir amazónico en un río del Parque Nacional Iguazú, con su característica trompa corta y pelaje oscuro" />
                     </div>
                     <div class="fauna-info">
                         <div class="fauna-name">Tapir</div>
                         <div class="fauna-description">Mamífero de gran tamaño, habita en selvas subtropicales.</div>
                     </div>
-                <a href="https://www.google.com/?hl=es" class="card-link">Ver más</a>
+                <a href="https://es.wikipedia.org/wiki/Tapirus" class="card-link text-decoration-none">Ver más</a>
                 </div>
             </div>
             <!-- Ciervo de los pantanos -->
             <div class="col-12 col-md-4 col-lg-3">
                 <div class="animal-card">
-                    <img src="Assets/ciervopantanos.jpg" 
+                    <img src="../assets/ciervopantanos.jpg" 
                          class="card-img-top" 
                          alt="Ciervo de los pantanos con grandes astas en un humedal al atardecer con reflejos en el agua">
                     <div class="card-body">
                         <h5 class="card-title">Ciervo de los Pantanos</h5>
                         <p class="card-text">Habita en los humedales del noreste argentino.</p>
-                        <a href="https://www.google.com/?hl=es" class="card-link">Ver más</a>
+                        <a href="https://es.wikipedia.org/wiki/Blastocerus_dichotomus" class="card-link text-decoration-none">Ver más</a>
                     </div>
                 </div>
             </div>
@@ -143,13 +223,13 @@
             <!-- pinguino -->
             <div class="col-12 col-md-4 col-lg-3">
                 <div class="animal-card">
-                    <img src="Assets/pinguinos.jpeg" 
+                    <img src="../assets/pinguinos.jpeg" 
                          class="card-img-top" 
                          alt="Pingüino magallánico caminando en colonia sobre playas pedregosas de Punta Tombo">
                     <div class="card-body">
                         <h5 class="card-title">Pingüino Magallánico</h5>
                         <p class="card-text">Colonias masivas en Punta Tombo, Chubut, durante la temporada.</p>
-                         <a href="https://www.google.com/?hl=es" class="card-link">Ver más</a>
+                         <a href="https://es.wikipedia.org/wiki/Spheniscus_magellanicus" class="card-link text-decoration-none">Ver más</a>
                     </div>
                 </div>
             </div>
@@ -157,13 +237,13 @@
             <!-- tucan -->
             <div class="col-12 col-md-4 col-lg-3">
                 <div class="animal-card">
-                    <img src="Assets/tucanes.jpg" 
+                    <img src="../assets/tucanes.jpg" 
                          class="card-img-top" 
                          alt="Tucan">
                     <div class="card-body">
                         <h5 class="card-title">Tucan</h5>
                         <p class="card-text">Ave de pico amarillo, pecho blanco sobre cuerpo negro.</p>
-                        <a href="https://www.google.com/?hl=es" class="card-link">Ver más</a>
+                        <a href="https://es.wikipedia.org/wiki/Ramphastos_toco" class="card-link text-decoration-none">Ver más</a>
 
                     </div>
                 </div>
@@ -172,13 +252,13 @@
              <!-- Ballena -->
             <div class="col-12 col-md-4 col-lg-3">
                 <div class="animal-card">
-                    <img src="Assets/ballenas.jpg" 
+                    <img src="../assets/ballenas.jpg" 
                          class="card-img-top" 
                          alt="ballena">
                     <div class="card-body">
                         <h5 class="card-title">Ballena Franca</h5>
                         <p class="card-text">En primavera dan su espectáculo en la provincia de Chubut.</p>
-                    <a href="https://www.google.com/?hl=es" class="card-link">Ver más</a>
+                    <a href="https://es.wikipedia.org/wiki/Eubalaena" class="card-link text-decoration-none">Ver más</a>
                     </div>
                 </div>
             </div>

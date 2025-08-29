@@ -1,6 +1,9 @@
 
         body {
-            background-color: #f8f9fa;
+            background-color: #d2a080af;
+        }
+        p {
+            color: black !important;
         }
         .gallery-title {
             color: #2c3e50;
