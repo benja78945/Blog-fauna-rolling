@@ -1,0 +1,70 @@
+         .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('https://adnpositivo.com/wp-content/uploads/2023/06/yaguarete.jpg') center/cover;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 350px 0;
+        }
+
+              
+        .species-card {
+            transition: transform 0.3s ease;
+            border: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .species-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
+        
+        .comment-section {
+            background-color: #f8faf8;
+            border-radius: 10px;
+            padding: 30px;
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: #28a745;
+            margin-bottom: 1rem;
+        }
+        
+        .conservation-banner {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: rgb(255, 255, 255);
+        }
+        
+       
+        .col-lg{
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+         .btn-primary1-custom {
+            background: linear-gradient(45deg);
+            background-color: #04611a;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        

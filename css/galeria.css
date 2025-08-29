@@ -1,0 +1,103 @@
+
+        body {
+            background-color: #f8f9fa;
+        }
+        .gallery-title {
+            color: #2c3e50;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            margin: 30px 0;
+        }
+        .fauna-card {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            transition: transform 0.3s;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            background: white;
+        }
+        .fauna-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        .fauna-img-container {
+            height: 200px;
+            overflow: hidden;
+            width: 100%;
+        }
+        .fauna-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        .fauna-card:hover .fauna-img-container img {
+            transform: scale(1.05);
+        }
+        .fauna-info {
+            padding: 15px;
+        }
+        .fauna-name {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        .fauna-description {
+            color: #07565c;
+            font-size: 0.9em;
+        }
+        
+        .gallery-description {
+            color: #7f8c8d;
+            margin-bottom: 3rem;
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .card-img-top {
+            height: 250px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .animal-card {
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: white;
+        }
+        .animal-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+
+        .card-body {
+            padding: 1.25rem;
+        }
+        .card-title {
+            color: #2c3e50;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .card-text {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        .card-link{
+            padding-left: 15px;
+            color: rgb(73, 42, 2);
+        }
+      
+
+
+    
+
+    
+
+
+
