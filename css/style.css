@@ -1,3 +1,126 @@
 ol {
     list-style: none;
 }
+
+/* para que las imágenes del slider y cards no se desacomoden*/
+.object-fit-cover { object-fit: cover; }
+
+/* para darle un alto mínimo al bloque publicitario del sidebar */
+.ratio-16x9 { min-height: 160px; }
+
+.carousel-caption h5 {
+    color: white;
+}
+
+.carousel-caption p {
+    color: white;
+}
+
+/* agregue una sombra leve al texto para que se lea mejor en las imagenes, de todas formas las imagenes son temporales, a modo de ejemplo */
+.carousel-caption h5,
+.carousel-caption p {
+    text-shadow: 6px 6px 12px black;
+}
+
+/* Altode  miniaturas de entradas */
+.card-img-top.object-fit-cover { height: 240px; }
+
+/* Fondo de la parte de texto en las entradas */
+.card-body {
+    background-color: grey;
+}
+
+/* Título de la entrada */
+.card-body .card-title {
+    color: white;
+}
+
+/* Texto de la entrada */
+.card-body .card-text {
+    color: white; 
+}
+
+/* bordes de las cards */
+.card {
+    border: 6px solid black;
+    border-radius: 8px;     
+}
+
+/* Alto mínimo para simular publicidad */
+.ratio-16x9 { min-height: 160px; }
+
+/* fondo para el index */
+body{
+    background: url("../assets/img/fondo.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* fondo para las paginas detalles */
+body.detalles{
+    background: url("../assets/img/fondo.jpg") no-repeat center center fixed;
+    background-size: cover;
+}  
+
+/* esto es para acomodar los colores de las letras  en las paginas detalles */
+body.detalles h1, 
+body.detalles h2, 
+body.detalle1 h3 {
+    color: white; 
+}   
+
+/* lo mismo de lo de arriba pero para el texto entre el <p> */
+body.detalles p {
+    background-color: rgba(255, 255, 255, 0.7); 
+    color: #000000;            
+    padding: 0.2rem 0.4rem;    
+    border-radius: 4px;        
+    display: inline-block;    
+}
+
+/* lo mismo de arriba de nuevo pero para lo que esta en figcaption, pd el important hace que funcione, ni idea de por que no funciona sin el 
+important */
+body.detalles figcaption {
+    color: white !important;
+}
+
+/* fondo para el error 404 */
+
+
+body.error-404 {
+    min-height: 100vh;           
+    background: url("../assets/img/404.jpg") center/cover no-repeat fixed;
+    color: white;                 
+}
+
+/* Animación en las cards */
+.card {
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.card:hover {
+    transform: scale(1.03); 
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.3); 
+}
+
+/* esto cambia el color de las flechas del carrusel a negro */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(200%);
+}
+
+/* y esto les da mas tamaño, para mejor visibilidad */
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 80px;   
+    height: 80px;
+}
+
+/* esto cambia la forma y los colores de los botones de la parte baja del carrousel*/
+.carousel-indicators [data-bs-target] {
+    background-color: black;
+    width: 12px;   /* opcional: más grandes */
+    height: 12px;
+    border-radius: 50%; /* círculo perfecto */
+}
